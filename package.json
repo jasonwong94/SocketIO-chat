@@ -1,0 +1,25 @@
+{
+  "name": "socket.io-chat",
+  "version": "1.0.0",
+  "description": "socket-io practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonwong94/SocketIO-chat.git"
+  },
+  "keywords": [
+    "chat",
+    "socket-io",
+    "html",
+    "javascript"
+  ],
+  "author": "jasonwong94",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonwong94/SocketIO-chat/issues"
+  },
+  "homepage": "https://github.com/jasonwong94/SocketIO-chat#readme"
+}
