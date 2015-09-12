@@ -24,5 +24,8 @@
   "homepage": "https://github.com/jasonwong94/SocketIO-chat#readme",
   "devDependencies": {
     "express": "^4.13.3"
+  },
+  "dependencies": {
+    "socket.io": "^1.3.6"
   }
 }
