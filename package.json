@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/jasonwong94/SocketIO-chat/issues"
   },
-  "homepage": "https://github.com/jasonwong94/SocketIO-chat#readme"
+  "homepage": "https://github.com/jasonwong94/SocketIO-chat#readme",
+  "devDependencies": {
+    "express": "^4.13.3"
+  }
 }
