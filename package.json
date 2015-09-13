@@ -4,6 +4,7 @@
   "description": "socket-io practice",
   "main": "index.js",
   "scripts": {
+    "build": "browserify ./client/*.js -o ./client/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +28,7 @@
     "express": "^4.13.3"
   },
   "dependencies": {
-    "socket.io": "^1.3.6"
+    "socket.io": "^1.3.6",
+    "socket.io-client": "^1.3.6"
   }
 }
