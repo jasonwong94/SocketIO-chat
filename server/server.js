@@ -1,12 +1,17 @@
-var app = require( 'express' )();
+var express = require( 'express');
+var app = express();
 var http = require( 'http').Server( app );
 var io= require( 'socket.io')(http);
+var path = require( 'path' );
 
 var PORT_NUMBER = 4400;
+var pwd= __dirname + './../client';
 
-app.get('/', function(req, res){
-	res.sendFile( __dirname + '/sample.html');
-});
+
+app.use( express.static( '../client'), function( req, res, next){
+	res.sendFile( path.normalize( __dirname + './../client/sample.html'));
+	console.log( 'accessing ' + req.originalUrl );
+} );
 
 io.on( 'connection', function(socket){
 	console.log('a user connected');
