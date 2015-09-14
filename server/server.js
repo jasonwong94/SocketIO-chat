@@ -10,7 +10,7 @@ var pwd= __dirname + './../client';
 
 app.use( express.static( '../client'), function( req, res, next){
 	res.sendFile( path.normalize( __dirname + './../client/sample.html'));
-	console.log( 'accessing ' + req.originalUrl );
+	// console.log( 'accessing ' + req.originalUrl );
 } );
 
 io.on( 'connection', function(socket){
