@@ -1,14 +1,22 @@
 <HTML>
 	<head>
-		<title>Sample Webpage</title>
+		<title>Sample Socket.IO Chat</title>
 		<script src="./main.js"></script>
+		<link rel="stylesheet" type="text/css" href="client.css"></link>
 	</head>
-	<body>
+	<body ng-app="chat">
 		<h1>Chat</h1>
-		<form>
-			<input type="text" />
-			<button>Send</button>
-			<button>Clear</button>
+		<section id="chat">
+		</section>
+		<form action="" ng-controller="clientController as vm">
+			 <input 
+			 	id="m" 
+			 	autocomplete="off" 
+			 	ng-model="vm.chat"/>
+			 	<a href="javascript:void(0)"
+			 		ng-click="vm.send()">
+			 		Send
+			 	</a>
 		</form>
 	</body>
 </HTML>

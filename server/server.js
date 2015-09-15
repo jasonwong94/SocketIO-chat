@@ -10,11 +10,19 @@ var pwd= __dirname + './../client';
 
 app.use( express.static( '../client'), function( req, res, next){
 	res.sendFile( path.normalize( __dirname + './../client/sample.html'));
-	// console.log( 'accessing ' + req.originalUrl );
 } );
 
 io.on( 'connection', function(socket){
 	console.log('a user connected');
+
+	socket.on( 'message', function( msg ){
+		console.log( 'new message received: '+ msg);
+		socket.broadcast.emit( 'server', msg);
+	})
+
+	socket.on( 'disconnect', function(){
+		console.log( 'user disconnected' );
+	})
 });
 
 http.listen( PORT_NUMBER, function(){
