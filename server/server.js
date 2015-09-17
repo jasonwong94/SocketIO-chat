@@ -7,10 +7,12 @@ var path = require( 'path' );
 var PORT_NUMBER = 4400;
 var pwd= __dirname + './../client';
 
-
-app.use( express.static( '../client'), function( req, res, next){
+app.get( '/', express.static( '../client'), function( req, res ){
+	app.use( '/', express.static( '../client'));
 	res.sendFile( path.normalize( __dirname + './../client/sample.html'));
-} );
+})
+
+app.use( '/files', express.static( '../client'));
 
 io.on( 'connection', function(socket){
 	console.log('a user connected');
