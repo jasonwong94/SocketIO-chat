@@ -4,7 +4,11 @@
   "description": "socket-io practice",
   "main": "index.js",
   "scripts": {
-    "build": "browserify ./client/*.js -o ./client/main.js",
+    "build-js": "browserify ./client/*.js -o ./client/main.js",
+    "build-css": "gulp compile-sass",
+    "build": "npm run build-js && npm run build-css",
+    "server": "node ./server/server.js",
+    "full-all": "npm run server && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
